@@ -33,12 +33,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
     
     #own
     'home',
     'impor_exim',
     'ekspor_exim',
-    'import_export',
+    
 ]
 
 MIDDLEWARE = [
