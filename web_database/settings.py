@@ -16,10 +16,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-um0-_b7ujn+_^1gxu11enx(9*+vde(r$f2$0fd-i_maubpsrub'
 
@@ -27,7 +23,6 @@ SECRET_KEY = 'django-insecure-um0-_b7ujn+_^1gxu11enx(9*+vde(r$f2$0fd-i_maubpsrub
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -38,9 +33,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #own
     'home',
     'impor_exim',
     'ekspor_exim',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -79,12 +77,8 @@ WSGI_APPLICATION = 'web_database.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database_analis',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'AnalisNR',
-        'PASSWORD' : 'Bcm4k1nb41k@!',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -122,6 +116,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 STATIC_URL = 'static/'
 
