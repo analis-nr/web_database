@@ -1,4 +1,7 @@
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 
-class EksporEximPageView (TemplateView):
+from .models import Dataekspor
+
+class EksporEximListView(ListView):
+    model = Dataekspor
     template_name = 'ekspor_exim.html'

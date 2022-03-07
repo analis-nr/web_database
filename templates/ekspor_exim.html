@@ -1,5 +1,63 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Yaga Jelek</h1>
+    {%for table in object_list %}
+        <div class="table-entry">
+            <table>
+                <tr>
+                    <th>No. PEN</th>
+                    <th>Tanggal PEB</th>
+                    <th>NPWP Eksportir</th>
+                    <th>Eksportir</th>
+                    <th>Penerima</th>
+                    <th>Alamat Penerima</th>
+                    <th>Negara Peneriman</th>
+                    <th>NPWP PPJK</th>
+                    <th>PPJK</th>
+                    <th>Carrier</th>
+                    <th>Flight</th>
+                    <th>Pel. Muat/Kode</th>
+                    <th>Pel. Bongkar/Kode</th>
+                    <th>Kode Valuta</th>
+                    <th>Devisa</th>
+                    <th>Jenis Kemasan</th>
+                    <th>Netto Item</th>
+                    <th>Bruto Item</th>
+                    <th>Tgl. Berangkat</th>
+                    <th>Jumlah Koli</th>
+                    <th>Tonase</th>
+                    <th>Devisa Item</th>
+                    <th>Tarif BK</th>
+                    <th>BK</th>
+                </tr>
+                <tr>
+                    <td><a href="">{{ table.nopeb }}</a></td>
+                    <td><a href="">{{ table.tanggalpeb }}</a></td>
+                    <td><a href="">{{ table.npwpeksportir }}</a></td>
+                    <td><a href="">{{ table.eksportir }}</a></td>
+                    <td><a href="">{{ table.penerima }}</a></td>
+                    <td><a href="">{{ table.alamatpenerima }}</a></td>
+                    <td><a href="">{{ table.negarapenerima }}</a></td>
+                    <td><a href="">{{ table.npwpppjk }}</a></td>
+                    <td><a href="">{{ table.ppjk }}</a></td>
+                    <td><a href="">{{ table.carrier }}</a></td>
+                    <td><a href="">{{ table.flight }}</a></td>
+                    <td><a href="">{{ table.pelmuatkode }}</a></td>
+                    <td><a href="">{{ table.pelbongkarkode }}</a></td>
+                    <td><a href="">{{ table.kodevaluta }}</a></td>
+                    <td><a href="">{{ table.devisa }}</a></td>
+                    <td><a href="">{{ table.jeniskemasan }}</a></td>
+                    <td><a href="">{{ table.jumlahbarang }}</a></td>
+                    <td><a href="">{{ table.nettoitem }}</a></td>
+                    <td><a href="">{{ table.brutoitem }}</a></td>
+                    <td><a href="">{{ table.tglberangkat }}</a></td>
+                    <td><a href="">{{ table.jumlahkoli }}</a></td>
+                    <td><a href="">{{ table.tonase }}</a></td>
+                    <td><a href="">{{ table.devisaitem }}</a></td>
+                    <td><a href="">{{ table.tarifbk }}</a></td>
+                    <td><a href="">{{ table.bk }}</a></td>
+                </tr>
+            </table>
+        </div>
+    {% endfor %}
 {% endblock content %}

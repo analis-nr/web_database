@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import EksporEximPageView
+from .views import EksporEximListView
 
 urlpatterns = [
-    path('ekspor-exim/', EksporEximPageView.as_view(), name='ekspor_exim'),
+    path('ekspor-exim/', EksporEximListView.as_view(), name='ekspor_exim'),
 ]
